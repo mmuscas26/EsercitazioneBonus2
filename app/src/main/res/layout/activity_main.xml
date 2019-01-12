@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <!-- SPAZIO INIZIALE CON TEXTVIEW ERRORE-->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ERRORE"
+            android:id="@+id/errore"
+            android:gravity="center"
+            android:textSize="30dp"
+            />
+        <!-- SPAZIO -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+        <!-- SPAZIO E TESTO INSERIMENTO DATI-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inserisci i tuoi dati!"
+            android:textSize="36dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- SPAZIO ED USERNAME -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:textSize="36dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:hint="inserisci username"/>
+
+        <!-- SPAZIO E PASSWORD -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password:"
+            android:textSize="36dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:hint="inserisci password"
+            android:inputType="textPassword"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
+
+        <!-- bottone accedi -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/accedi"
+            android:text="Accedi!"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrati ora!"
+            android:id="@+id/link"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:autoLink="all"
+            />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
