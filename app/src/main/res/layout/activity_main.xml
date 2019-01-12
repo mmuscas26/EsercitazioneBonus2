@@ -91,7 +91,6 @@
             android:id="@+id/link"
             android:gravity="center"
             android:textSize="16dp"
-            android:autoLink="all"
             />
 
     </LinearLayout>

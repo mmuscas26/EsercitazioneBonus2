@@ -24,14 +24,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //recupero gli ID
         username = (EditText)findViewById(R.id.username);
         password = (EditText)findViewById(R.id.password);
         accedi = (Button)findViewById(R.id.accedi);
         errore = (TextView) findViewById(R.id.errore);
-        errore.setVisibility(View.GONE); //di default la visibilità dell'error text è gone
+        errore.setVisibility(View.GONE);
+        //link sottolineato per la registrazione
         link = (TextView) findViewById(R.id.link);
         link.setText(Html.fromHtml("<u>Registrati ora!</u>"));
+
         accedi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                     persona.setUsername(""+username.getText().toString());
                     persona.setPassword(""+password.getText().toString());
                     showResults.putExtra(PERSONA_EXTRA, persona);
-                    // richiama l'activity ShowResult
+                    //passo i dati del mio utente ed attivo la seconda activity
                     startActivity(showResults);
                 }
             }
@@ -76,13 +78,13 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 1:
                 errore.setVisibility(View.VISIBLE);
-                errore.setText("Si è verificato un Errore");
+                errore.setText("Si è verificato un errore");
                 break;
             default:
                 errore.setVisibility(View.VISIBLE);
                 errore.setText("Si sono verificati " + errors+" errori" );
                 break;
         }
-        return errors==0; // ritorna true se non ci sono errori
+        return errors==0; // se non trova errori rende TRUE
     }
 }

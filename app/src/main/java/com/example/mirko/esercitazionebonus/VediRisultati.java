@@ -42,7 +42,7 @@ public class VediRisultati extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent undo = new Intent(VediRisultati.this, MainActivity.class);
-                startActivity(undo);
+                startActivity(undo);    //bottone per tornare alla prima activity
             }
         });
     }
